@@ -4,8 +4,9 @@ jobs:
       vmImage: ubuntu-latest
     displayName: Run JMeter tests
     steps:
-      - task: PowerShell@2
+      - task: Bash@3
         displayName: Execute JMeter tests
+        continueOnError: true
         inputs:
           targetType: filePath
           filePath: 'jmeter/test.sh'

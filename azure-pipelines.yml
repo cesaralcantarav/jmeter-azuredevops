@@ -6,13 +6,12 @@ jobs:
     steps:
       - task: Bash@3
         displayName: Execute JMeter tests
-        continueOnError: true
         inputs:
           targetType: filePath
           filePath: 'jmeter/test.sh'
           arguments: '$PWD consulta_datos_sensibles.jmx'
           workingDirectory: jmeter
-          failOnStderr: true
+          failOnStderr: false
       - task: PublishPipelineArtifact@1
         displayName: Publish JMeter Report
         inputs:

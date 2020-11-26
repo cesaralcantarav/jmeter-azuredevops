@@ -24,3 +24,5 @@ hs_err_pid*
 
 .idea
 *.iml
+jmeter/report
+test-plan.jtl
